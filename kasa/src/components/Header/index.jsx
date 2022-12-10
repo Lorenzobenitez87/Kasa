@@ -1,12 +1,14 @@
 
-import Nav from './nav/index'
+import Nav from './Nav/index'
+import Logo from './Logo/index'
+import '../../styles/Header/index.css';
 
 function Header() {
     return (
-        <div>
-            
+        <header className='header'>
+            <Logo/>
             <Nav />
-        </div>
+        </header>
     )
 }
 
