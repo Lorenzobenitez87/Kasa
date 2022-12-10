@@ -3,7 +3,7 @@ import '../../styles/Footer/index.css'
 
 function Footer() {
     return (
-        <footer className='footer'>
+        <footer>
             <div>
             <img src={LogoFooter} alt='Logo de Kasa' />
             <p>© 2020 Kasa. All rights reserved</p>

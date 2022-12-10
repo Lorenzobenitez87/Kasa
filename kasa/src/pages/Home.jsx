@@ -8,7 +8,7 @@ import '../styles/index.css';
 
 function Home() {
   return (
-    <div className='container-general'>
+    <div>
       <Header />
       <Section1 />
       <Footer />

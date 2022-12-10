@@ -1,0 +1,23 @@
+.sectionError {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FF6060;
+    margin-bottom: 30px;
+}
+
+.sectionError h1 {
+    font-size: 280px;
+    margin: 0;
+}
+
+.sectionError p {
+    margin-top: 0;
+    margin-bottom: 150px;
+    font-size: 36px;
+}
+
+.sectionError a {
+    color: #FF6060
+}
