@@ -6,7 +6,7 @@ import '../../styles/Header/index.css';
 function Header() {
     return (
         <header className='header'>
-            <Logo/>
+            <Logo />
             <Nav />
         </header>
     )

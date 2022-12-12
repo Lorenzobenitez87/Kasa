@@ -1,0 +1,11 @@
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: #F6F6F6;
+    width: 100%;
+    padding: 50px;
+    border-radius: 25px;
+    margin-bottom: 50px;
+}

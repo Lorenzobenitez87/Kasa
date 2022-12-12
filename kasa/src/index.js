@@ -13,7 +13,7 @@ root.render(
     <Router>
             <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/logement" element={<Logement />} />
+            <Route exact path="/fiche-logement/:id" element={<Logement />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<Error />} />
           </Routes>

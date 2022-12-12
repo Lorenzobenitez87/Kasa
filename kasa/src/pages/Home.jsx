@@ -1,8 +1,8 @@
 //import { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import Section1 from '../components/Home/Section1'
-//import Body from '../components/Body/index';
-import Footer from '../components/Footer/index';
+import Gallery from '../components/Home/Gallery';
+import Footer from '../components/Footer';
 import '../styles/index.css';
 
 
@@ -11,9 +11,10 @@ function Home() {
     <div>
       <Header />
       <Section1 />
+      <Gallery />
       <Footer />
     </div>
-    
+
   )
 }
 
