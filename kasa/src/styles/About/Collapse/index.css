@@ -1,0 +1,84 @@
+.collapse {
+  max-width: 64rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  background: #f7f7f7;
+}
+
+.collapse.is-close {
+  background: white;
+}
+
+.collapseTitle,
+.collapseText {
+  line-height: 2rem;
+  font-size: 25px
+}
+
+.collapseTitle {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+
+  color: white;
+
+  background: #FF6060;
+
+  cursor: pointer;
+}
+
+.collapseTitle span {
+  padding: 0.25rem 0;
+}
+
+.collapseTitle i {
+  padding: 0.5rem 1rem;
+}
+
+.collapseText {
+  height: 100%;
+  margin: 0;
+  padding: 1.5rem;
+  overflow: hidden;
+
+  color: #FF6060;
+  font-weight: 400;
+
+  opacity: 1;
+
+  transition: 200ms;
+}
+
+.collapseText.is-close {
+  padding: 0 1rem;
+  height: 0;
+
+  opacity: 0;
+}
+
+@media screen and (max-width: 81.75rem) {
+  .collapse {
+    margin: 1rem auto;
+  }
+
+  .collapseTitle,
+  .collapseText {
+    line-height: 1.35rem;
+    font-size: 20px;
+  }
+
+  .collapseTitle span {
+    padding: 0.125rem 0;
+  }
+
+  .collapseTitle i {
+    padding: 0.25rem 0;
+  }
+
+  .collapseText {
+    padding: 1rem;
+  }
+}

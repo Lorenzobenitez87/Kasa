@@ -2,10 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home';
-import Logement from './pages/Logement';
+import Location from './pages/Location';
 import About from './pages/About';
 import Error from './pages/Error';
 import reportWebVitals from './reportWebVitals';
+import { housingsList } from './datas/housingsList';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,7 +15,8 @@ root.render(
     <Router>
             <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/fiche-logement/:id" element={<Logement />} />
+            <Route exact path="/location/:id" render={(props) => (<Location housingsList={housingsList}
+                  {...props} />)} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<Error />} />
           </Routes>

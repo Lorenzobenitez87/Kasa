@@ -1,20 +1,35 @@
-import { locationList } from '../../../../datas/logements.js'
-//import PropTypes from 'prop-types'
+import React from 'react'
 import '../../../../styles/Home/Gallery/Thumb/index.css'
+import { Link } from 'react-router-dom'
+import PropTypes from "prop-types";
 
-
-function Thumb( {cover, title} ) {
+function Thumb({ id, cover, title,location }) {
     return (
-        <div className='thumb'>
-            <img className='thumbCover' src={locationList.cover} alt={`${title} cover`} />
-            <div className='thumbTitle'>title</div>
-        </div>
+        
+        <Link
+        className="thumb-wrapper"
+        to={`/location/${id}`}
+        onClick={() => window.scrollTo(0, 0)}
+      >
+        <article className='thumb'>
+            <img 
+            className='thumbCover' 
+            src={cover} 
+            alt={`Une location située en ${location}`} 
+            />
+            <div className='thumbFilter'></div>
+            <h2 className='thumbTitle'>{title}</h2>
+        </article>
+        </Link>
+        
     )
 }
 
-//Thumb.propTypes = {
-//    cover: PropTypes.string,
-//    title: PropTypes.string.isRequired
-//}
+Thumb.propTypes = {
+    id: PropTypes.string.isRequired,
+    cover: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    location: PropTypes.string,
+  }; 
 
 export default Thumb

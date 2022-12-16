@@ -1,22 +1,67 @@
-.thumb {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-    border-radius: 10px;
-    height: 340px;
-    width: 340px;
-}
-
-.thumbCover {
-    color: #FF6060;
+.thumb-wrapper {
+    
     width: 100%;
 }
 
+.thumb {
+
+    height: 340px;
+    width: 340px;
+
+    border-radius: 10px;
+
+    position: relative;
+    overflow: hidden;
+    background: #FF6060;
+}
+
+.thumbFilter {
+
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    top: 0;  
+
+    background: linear-gradient(185deg, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.5));
+}
+
+.thumbCover {
+
+    height: 100%;
+    width: 100%;
+
+    border-radius: 10px;
+
+    object-fit: cover;
+}
+
 .thumbTitle {
-    color: white;
+
+    font-size: 25px;
     font-weight: 500;
-    font-size: 18px;
+    
     position: absolute;
     left: 5.88%;
-    right: 5.88%;
-    top: 78.82%;
     bottom: 5.88%;
+    
+    margin: 0;
+    
+    color: white;
 }
+
+@media screen and (max-width: 970px) {
+
+    .thumb,
+    .thumbfilter {
+      width: 100%;
+      height: 260px;
+    }
+}
+
+@media screen and (max-width: 55.5rem) {
+    
+    .thumb {
+      gap: 20px;
+    }
+  }

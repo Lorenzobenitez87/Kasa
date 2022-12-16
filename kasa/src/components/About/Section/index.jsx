@@ -3,9 +3,9 @@ import '../../../styles/Home/Section1/index.css'
 
 function Img() {
     return (
-        <div className='section1'>
+        <section className='section1'>
        <img src={Image} alt='' />
-       </div>
+       </section>
     )
 }
 

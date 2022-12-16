@@ -1,11 +1,40 @@
 .gallery {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: relative;
-    background-color: #F6F6F6;
+    
     width: 100%;
+
     padding: 50px;
-    border-radius: 25px;
     margin-bottom: 50px;
+    border-radius: 25px;
+
+
+    background: #F6F6F6;
+}
+
+.gallery ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    position: relative;
+
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-width: 970px) {
+    .gallery {
+        width: 100%;
+
+        padding: 0;
+        border-radius: 0;
+
+        background: white;
+    }
+
+    .gallery ul {
+        gap: 30px;
+    }
 }

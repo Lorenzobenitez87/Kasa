@@ -1,12 +1,35 @@
-import Thumb from './Thumb/index'
+import React from "react";
+import PropTypes from "prop-types";
+import { housingsList } from "../../../datas/housingsList.js"
+import Thumb from "./Thumb";
 import '../../../styles/Home/Gallery/index.css'
 
-function Gallery () {
-    return (
-        <div className='gallery'>
-        <Thumb />
-        </div>
-    )
+
+function Gallery() {
+
+  return (
+    <main className="gallery">
+      <ul>
+        {housingsList.map(({ id, cover, title, location }) =>
+          <div key={id}>
+            <Thumb
+              id={id}
+              cover={cover}
+              title={title}
+              location={location}
+            />
+          </div>
+
+        )}
+      </ul>
+    </main>
+  )
+
 }
 
-export default Gallery
+Gallery.propTypes = {
+  housingsList: PropTypes.arrayOf(PropTypes.instanceOf(housingsList))
+    .isRequired,
+};
+
+export default Gallery;

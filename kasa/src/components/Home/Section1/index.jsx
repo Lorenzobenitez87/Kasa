@@ -5,7 +5,7 @@ function Img() {
     return (
         <div className='section1'>
        <img src={Image} alt='Chez vous, partout et ailleurs' />
-            <p>Chez vous, partout et ailleurs</p>
+            <h1>Chez vous, partout et ailleurs</h1>
        </div>
     )
 }
