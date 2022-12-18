@@ -1,5 +1,4 @@
 .gallery {
-    display: flex;
     position: relative;
     
     width: 100%;
@@ -35,6 +34,7 @@
     }
 
     .gallery ul {
+        flex-direction: column;
         gap: 30px;
     }
 }

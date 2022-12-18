@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "../../../styles/About/Collapse/index.css";
+import "../../styles/Collapse/index.css";
 
 class Collapse extends React.Component {
   constructor(props) {

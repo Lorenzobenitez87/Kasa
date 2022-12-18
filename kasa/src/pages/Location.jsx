@@ -1,19 +1,19 @@
 
 import React from "react";
 
-import Error from "./Error";
+import Error from "./Error404";
 import Header from '../components/Header/index'
+import Carousel from '../components/Carousel'
+import Collapse from '../components/Collapse'
 import Footer from '../components/Footer/index'
-import Carousel from '../components/FicheLogement/Carousel'
-import Collapse from '../components/About/Collapse'
 
 
 class Location extends React.Component {
   render() {
 
-  const { id } = this.props.match.params;
+    const { id } = this.props.match.params;
     const housingToDisplay = this.props.housingsList.findById(id);
-
+    console.log(housingToDisplay);
     if (!housingToDisplay) {
       return <Error />;
     }
@@ -21,11 +21,11 @@ class Location extends React.Component {
     const ad = housingToDisplay;
     const ratingScale = [1, 2, 3, 4, 5];
 
-  return (
-    <div>
-      <Header />
-      <Carousel pictures={ad.pictures}/>
-      <section>
+    return (
+      <div>
+        <Header />
+        <Carousel pictures={ad.pictures} />
+        <section>
           <header className="Advertisement__header">
             <div className="Advertisement__summary-box">
               <h1 className="Advertisement__title">{ad.title}</h1>
@@ -55,9 +55,8 @@ class Location extends React.Component {
               <div className="Advertisement__rating">
                 {ratingScale.map((scale) => (
                   <i
-                    className={`fas fa-star${
-                      scale <= ad.rating ? " colored" : ""
-                    }`}
+                    className={`fas fa-star${scale <= ad.rating ? " colored" : ""
+                      }`}
                     key={`star-${scale}`}
                   ></i>
                 ))}
@@ -75,10 +74,10 @@ class Location extends React.Component {
             </div>
           </div>
         </section>
-      <Footer />
-    </div>
-  )
-}
+        <Footer />
+      </div>
+    )
+  }
 }
 
 export default Location

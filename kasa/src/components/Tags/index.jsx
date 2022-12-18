@@ -1,4 +1,4 @@
-import '../../../styles/FicheLogement/Tags/index.css'
+import '../../styles/FicheLogement/Tags/index.css'
 
 function Tag () {
     return (

@@ -14,7 +14,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "../../../styles/Location/Carousel/index.css";
+import "../../styles/Carousel/index.css";
 
 class Carousel extends React.Component {
   constructor(props) {

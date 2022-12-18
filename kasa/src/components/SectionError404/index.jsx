@@ -1,8 +1,8 @@
 
 import { Link } from 'react-router-dom'
-import '../../styles/Error/Section/index.css'
+import '../../styles/SectionError404/index.css'
 
-function SectionError() {
+function Error404() {
     return (
             <section className='sectionError'>
             <h1>404</h1>
@@ -14,4 +14,4 @@ function SectionError() {
     )
 }
 
-export default SectionError
+export default Error404

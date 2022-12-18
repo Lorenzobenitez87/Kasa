@@ -1,15 +1,15 @@
 import Header from '../components/Header'
-import SectionError from '../components/SectionError'
+import SectionError404 from '../components/SectionError404'
 import '../styles/index.css'
 
 
-function Error() {
+function Error404() {
     return (
         <div>
             <Header />
-            <SectionError />
+            <SectionError404 />
         </div>
     )
 }
 
-export default Error
+export default Error404

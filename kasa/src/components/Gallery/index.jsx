@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { housingsList } from "../../../datas/housingsList.js"
-import Thumb from "./Thumb";
-import '../../../styles/Home/Gallery/index.css'
+import { housingsList } from "../../datas/housingsList.js"
+import Thumb from "../Thumb";
+import '../../styles/Gallery/index.css'
 
 
 function Gallery() {
-
+ 
   return (
     <main className="gallery">
       <ul>
@@ -19,7 +19,7 @@ function Gallery() {
               location={location}
             />
           </div>
-
+          
         )}
       </ul>
     </main>
@@ -28,7 +28,7 @@ function Gallery() {
 }
 
 Gallery.propTypes = {
-  housingsList: PropTypes.arrayOf(PropTypes.instanceOf(housingsList))
+  housings: PropTypes.arrayOf(PropTypes.instanceOf(housingsList))
     .isRequired,
 };
 

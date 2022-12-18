@@ -19,4 +19,19 @@ footer div {
 
 footer img {
     height: 40px;
+    width: 122px;
+}
+
+footer p {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-width: 970px) {
+
+    footer p {
+        font-size: 15px;
+    }
+
 }

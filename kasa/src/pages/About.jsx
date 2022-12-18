@@ -1,8 +1,10 @@
 //import { useState, useEffect } from 'react'
 import Header from '../components/Header/index'
-import SectionImg from '../components/About/Section/index'
-import Collapse from '../components/About/Collapse'
+import SectionImg from '../components/Section/index'
+import Collapse from '../components/Collapse'
 import Footer from '../components/Footer/index'
+
+import Image from '../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.jpg'
 
 
 const ABOUT_CONTENTS = [
@@ -28,7 +30,11 @@ function About() {
   return (
     <div>
       <Header />
-      <SectionImg />
+
+      <SectionImg >
+        <img src={Image} alt="Les montagnes et l'air pure" />
+      </ SectionImg >
+
       <div className="collapses-box">
         {ABOUT_CONTENTS.map(({ title, text }) => (
           <Collapse key={`about-${title}`} title={title} textArray={[text]} />

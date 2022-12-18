@@ -3,12 +3,31 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    width: 200px;
-    margin-left: auto;  
+    gap: 5px;
+
+    width: 300px;
+
+    margin-left: 10px;  
 }
 
 nav a {
-    font-weight: 400;
+    font-size: 25px;
+    font-weight: 500;
+
     color: #FF6060;
     text-decoration: none;
+}
+
+@media screen and (max-width: 970px) {
+
+    .nav {
+        height: 17px;
+        width: 140px;
+    }
+
+    nav a {
+        font-size: 12.5px;
+        
+        text-transform: uppercase;
+    }
 }

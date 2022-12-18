@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home';
 import Location from './pages/Location';
 import About from './pages/About';
-import Error from './pages/Error';
+import Error404 from './pages/Error404';
 import reportWebVitals from './reportWebVitals';
 import { housingsList } from './datas/housingsList';
 
@@ -14,11 +14,11 @@ root.render(
     <React.StrictMode>
     <Router>
             <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route exact path="/" element={<Home housing={housingsList.id} />} />
             <Route exact path="/location/:id" render={(props) => (<Location housingsList={housingsList}
                   {...props} />)} />
             <Route path="/about" element={<About />} />
-            <Route path="*" element={<Error />} />
+            <Route path="*" element={<Error404 />} />
           </Routes>
     </Router>
   </React.StrictMode>, 

@@ -52,16 +52,13 @@
 
 @media screen and (max-width: 970px) {
 
+    .thumb{
+        width: 100%;
+        gap: 20px;
+    }
+
     .thumb,
     .thumbfilter {
-      width: 100%;
       height: 260px;
     }
 }
-
-@media screen and (max-width: 55.5rem) {
-    
-    .thumb {
-      gap: 20px;
-    }
-  }
