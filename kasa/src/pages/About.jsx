@@ -6,6 +6,8 @@ import Footer from '../components/Footer/index'
 
 import Image from '../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.jpg'
 
+import '../styles/style.css';
+
 
 const ABOUT_CONTENTS = [
   {

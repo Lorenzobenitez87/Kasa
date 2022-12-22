@@ -1,11 +1,11 @@
-img {
+.logo {
     height: 70px;
     width: 220px;
 }
 
 @media screen and (max-width: 970px) {
 
-    img {
+    .logo {
         height: 50px;
         width: 150px;
     }

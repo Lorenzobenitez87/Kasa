@@ -1,4 +1,4 @@
-.section1 {
+.section {
 
     display: flex;
     justify-content: center;
@@ -8,26 +8,28 @@
     width: 100%;
 
     position: relative;
-    
+
     margin-bottom: 50px;
     border-radius: 25px;
 
     background-color: black;
 }
 
-.section1 img {
+.section img {
 
     height: 100%;
     width: 100%;
+
+    object-fit: cover;
 
     border-radius: 25px;
     opacity: 0.7;
 }
 
-.section1 h1 {
+.section h1 {
 
-    font-size: 50px;
-    font-weight: 500; 
+    font-size: 48px;
+    font-weight: 500;
     width: 80%;
 
     text-align: center;
@@ -39,28 +41,38 @@
 
 @media screen and (max-width: 970px) {
 
-    .section1 {
+    .section {
+
         height: 110px;
+        
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .section img {
+
         border-radius: 10px;
     }
 
-    .section1 img {
-        border-radius: 10px;
-    }
+    .section h1 {
 
-    .section1 h1 {
-      font-size: 25px;
+        font-size: 32px;
     }
 }
 
 @media screen and (max-width: 550px) {
 
-    .section1 {
+    .section {
+
         justify-content: flex-start;
     }
 
-    .section1 h1 {
+    .section h1 {
+
+        font-size: 24px;
+
         text-align: start;
+
         margin-left: 20px;
     }
 

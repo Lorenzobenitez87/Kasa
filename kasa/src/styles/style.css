@@ -8,21 +8,37 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-
 }
 
 body {
   font-family: 'Montserrat', cursive;
-
+  height: 100vh;
   width: auto;
   max-width: 2000px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 100px;
   margin: 0;
 }
 
-@media screen and (max-width: 970px) {
+h1, h2, h3, h4, h5, h6, p {
+
+  color: #FF6060;
+}
+
+
+
+@media screen and (max-width: 1080px) {
+
+  body {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+  }
+}
+
+
+@media screen and (max-width: 550px) {
 
   body {
     padding-left: 20px;

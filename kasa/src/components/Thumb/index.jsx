@@ -1,14 +1,16 @@
 import React from 'react'
-import '../../styles/Thumb/index.css'
 import { Link } from 'react-router-dom'
 import PropTypes from "prop-types";
+
+import '../../styles/Thumb/index.css'
 
 function Thumb({ id, cover, title, location }) {
   return (
 
     <Link
       className="thumb-wrapper"
-      to={`/location/${id}`}
+      to={`/housing/${id}`}
+      key={`housing-${id}`}
       onClick={() => window.scrollTo(0, 0)}
     >
       <article className='thumb'>

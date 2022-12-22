@@ -1,10 +1,10 @@
 import '../../styles/Section/index.css'
 
-function Section({children}) {
+function Section({ children }) {
     return (
-        <section className='section1'>
+        <section className='section'>
             {children}
-       </section>
+        </section>
     )
 }
 

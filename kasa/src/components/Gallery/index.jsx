@@ -1,8 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { housingsList } from "../../datas/housingsList.js"
 import Thumb from "../Thumb";
+//import PropTypes from "prop-types";
+
 import '../../styles/Gallery/index.css'
+
+import { housingsList } from "../../datas/housingsList.js"
 
 
 function Gallery() {
@@ -11,14 +13,14 @@ function Gallery() {
     <main className="gallery">
       <ul>
         {housingsList.map(({ id, cover, title, location }) =>
-          <div key={id}>
+          <li key={id}>
             <Thumb
               id={id}
               cover={cover}
               title={title}
               location={location}
             />
-          </div>
+          </li>
           
         )}
       </ul>
@@ -27,9 +29,6 @@ function Gallery() {
 
 }
 
-Gallery.propTypes = {
-  housings: PropTypes.arrayOf(PropTypes.instanceOf(housingsList))
-    .isRequired,
-};
+
 
 export default Gallery;

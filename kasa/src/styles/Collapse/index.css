@@ -1,36 +1,55 @@
+.collapses-box {
+
+  min-height: 570px;
+}
+
 .collapse {
+
   max-width: 64rem;
-  margin: 2rem auto;
+
+  margin: 30px auto;
   border-radius: 10px;
+
   background: #f7f7f7;
 }
 
 .collapse.is-close {
+
+  height: 64px;
+
   background: white;
 }
 
 .collapseTitle,
 .collapseText {
-  line-height: 2rem;
-  font-size: 25px
+
+  line-height: 34px;
+  font-size: 24px
 }
 
 .collapseTitle {
+
   display: flex;
   justify-content: space-between;
 
+  font-weight: 500;
+
   margin: 0;
   padding: 0.5rem 1rem;
+
   border-radius: 10px;
 
   color: white;
-
   background: #FF6060;
 
   cursor: pointer;
 }
 
 .collapseTitle span {
+
+  display: flex;
+  align-items: center;
+
   padding: 0.25rem 0;
 }
 
@@ -40,16 +59,16 @@
 
 .collapseText {
   height: 100%;
-  margin: 0;
-  padding: 1.5rem;
   overflow: hidden;
+  list-style: none;
+
+  font-weight: 400;
+  
+  padding: 0px 30px 10px 20px;
+  
+  transition: 200ms;
 
   color: #FF6060;
-  font-weight: 400;
-
-  opacity: 1;
-
-  transition: 200ms;
 }
 
 .collapseText.is-close {
@@ -59,9 +78,9 @@
   opacity: 0;
 }
 
-@media screen and (max-width: 81.75rem) {
+@media screen and (max-width: 970px) {
   .collapse {
-    margin: 1rem auto;
+    margin: 0px auto;
   }
 
   .collapseTitle,
@@ -78,7 +97,12 @@
     padding: 0.25rem 0;
   }
 
-  .collapseText {
-    padding: 1rem;
-  }
+}
+
+@media screen and (max-width: 550px) {
+
+.collapses-box {
+
+  margin-bottom: auto;
+}
 }

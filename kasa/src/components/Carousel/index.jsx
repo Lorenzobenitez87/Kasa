@@ -1,98 +1,56 @@
-//import Image from '../../../assets/img-fiche-logement.jpg'
-//import '../../../styles/Location/Carousel/index.css'
-//
-//function Carousel() {
-//    return (
-//        <div className='carousel'>
-//       <img src={Image} className='carousel__picture' alt='Montagne air pure' />
-//       </div>
-//    )
-//}
-//
-//export default Carousel 
+import React from "react"
+import { useState } from "react"
+import PropTypes from "prop-types"
 
-import React from "react";
-import PropTypes from "prop-types";
+import "../../styles/Carousel/index.css"
 
-import "../../styles/Carousel/index.css";
+function Carousel({ pictures }) {
 
-class Carousel extends React.Component {
-  constructor(props) {
-    super(props);
+  const [current, setCurrent] = useState(0);
 
-    this.state = {
-      currentPictureIndex: 0,
-    };
-    this.updateCurrentPicture = this.updateCurrentPicture.bind(this);
+  const length = pictures.length;
+
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
+
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
+
+  if (!Array.isArray(pictures) || pictures.length <= 0) {
+    return null;
   }
 
-  updateCurrentPicture(newIndex) {
-    this.setState({
-      currentPictureIndex: newIndex,
-    });
-  }
-
-  /**
-   * Update the state to the next or the previous picture, where :
-   * - the next picture of the last one is the first one
-   * - the previous picture of the first one is the last one
-   * @param {boolean} nextClicked
-   */
-  updatePicture(nextClicked = true) {
-    const current = this.state.currentPictureIndex;
-    const quantity = this.props.pictures.length;
-    const pictureToDisplayIndex = nextClicked
-      ? (current + 1) % quantity
-      : (current + quantity - 1) % quantity;
-    this.updateCurrentPicture(pictureToDisplayIndex);
-  }
-
-  render() {
-    const pictures = this.props.pictures;
-
-    return (
-      <div className="carousel">
-        <div className="carousel__pictures-box">
-          {pictures.length > 0 ? (
-            <img
-              className="carousel__picture"
-              src={pictures[this.state.currentPictureIndex]}
-              alt=""
-            />
-          ) : (
-            <p className="carousel__no-pic-message">Aucune image disponible</p>
-          )}
-        </div>
-
-        {pictures.length > 1 ? (
-          <nav className="carousel__nav">
-            <i
-              className="fas fa-chevron-left"
-              onClick={() => this.updatePicture(false)}
-            ></i>
-            <i
-              className="fas fa-chevron-right"
-              onClick={() => this.updatePicture(true)}
-            ></i>
-          </nav>
-        ) : (
-          ""
-        )}
-
-        {pictures.length > 0 ? (
-          <div className="carousel__counter">
-            {this.state.currentPictureIndex + 1}/{pictures.length}
-          </div>
-        ) : (
-          ""
-        )}
+  return (
+    <div className="carousel">
+      <div className="carouselPictures-box">
+        <img
+          className="carouselPicture"
+          src={pictures[current]}
+          alt=""
+        />
       </div>
-    );
-  }
+      <nav className="carouselNav">
+        <i
+          className="fas fa-chevron-left"
+          onClick={prevSlide}
+        ></i>
+        <i
+          className="fas fa-chevron-right"
+          onClick={nextSlide}
+        ></i>
+      </nav>
+      <div className="carouselCounter">
+        {current + 1}/{pictures.length}
+      </div>
+    </div>
+  )
 }
+
 
 Carousel.propTypes = {
   pictures: PropTypes.arrayOf(PropTypes.string),
 };
 
-export default Carousel;
+export default Carousel

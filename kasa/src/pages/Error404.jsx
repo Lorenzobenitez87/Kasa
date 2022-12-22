@@ -1,6 +1,6 @@
 import Header from '../components/Header'
 import SectionError404 from '../components/SectionError404'
-import '../styles/index.css'
+import '../styles/style.css'
 
 
 function Error404() {

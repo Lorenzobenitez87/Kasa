@@ -1,0 +1,224 @@
+.housingHeader {
+    display: flex;
+    align-items: flex-start;
+
+    padding: 2rem 0 0 0;
+}
+
+.housingSummary-box {
+    max-width: calc(100% - 16rem);
+    margin: 0 4rem 0 0;
+}
+
+.housingTitle {
+
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.35;
+    
+    margin: 0;
+}
+
+.housingLocation {
+    margin: 0.5rem 0;
+
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.housingTags-box {
+    margin: 1rem 0 0 0;
+}
+
+.housingTag {
+    display: inline-block;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    margin: 0.25rem 1rem 0.25rem 0;
+    padding: 0.25rem 2rem;
+    border-radius: 5px;
+
+    color: white;
+
+    background: #FF6060;
+}
+
+.housingAside-box {
+    width: 230px;
+}
+
+.housingHost-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.housingHost-name {
+    width: 93px;
+    font-size: 18px;
+    font-weight: 500;
+
+    text-align: end;
+
+    margin: 0 1rem 0 0;
+}
+
+.housingHost-picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+
+    font-size: 50px;
+    text-align: center;
+
+    background: #C4C4C4;
+}
+
+.housingRating {
+
+    width: 220PX;
+
+    margin: 1.5rem 0 0 0;
+
+    text-align: right;
+}
+
+.housingRating i {
+    margin: 0 0 0 0.5rem;
+
+    color: #E3E3E3;
+    font-size: 30px;
+}
+
+.housingRating i.colored {
+    color: #FF6060;
+}
+
+.housingCollapses-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+
+    margin-bottom: 60px;
+}
+
+.housingCollapse {
+    width: 100%;
+}
+
+.collapseTitle {
+    font-size: 18px;
+    font-weight: 500;
+}
+.collapseText {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+@media screen and (max-width: 970px) {
+    .housingHeader {
+        padding: 1.5rem 0 0 0;
+    }
+
+    .housingTitle {
+        font-size: 25px;
+    }
+
+    .housingRating i {
+        font-size: 25px;
+    }
+
+    .housingCollapse {
+        width: 25rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .housingHeader {
+        flex-direction: column;
+
+        padding: 0.5rem 0 0 0;
+        margin-bottom: 0;
+    }
+
+    .housingSummary-box {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .housingTitle {
+        font-size: 18px;
+    }
+
+    .housingLocation {
+
+        font-size: 14px;
+    }
+
+    .housingTag {
+
+        font-size: 10px;
+    }
+
+    .housingAside-box {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        margin: 1rem 0 0 0;
+    }
+
+    .housingHost-box {
+        justify-content: flex-end;
+        width: calc(100% - 9rem);
+    }
+
+    .housingHost-name {
+        font-size: 12px;
+        width: 50px;
+    }
+
+    .housingHost-picture {
+        width: 32px;
+        height: 32px;
+    }
+
+    .housingRating {
+        margin: 0;
+
+        text-align: left;
+    }
+
+    .housingRating i {
+        margin: 0 0 0 0.25rem;
+
+        font-size: 15px;
+    }
+
+    .housingCollapses-box {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .housingCollapse {
+        width: 100%;
+    }
+
+    .housingCollapse .collapse {
+        margin: 1rem 0 0 0;
+    }
+
+    .collapseTitle {
+        font-size: 13px;
+    }
+    .collapseText {
+        font-size: 12px;
+    }
+
+}

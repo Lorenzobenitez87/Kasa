@@ -7,11 +7,11 @@
 
     width: 300px;
 
-    margin-left: 10px;  
+    margin-left: 10px;
 }
 
 nav a {
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 500;
 
     color: #FF6060;
@@ -26,8 +26,8 @@ nav a {
     }
 
     nav a {
-        font-size: 12.5px;
-        
+        font-size: 12px;
+
         text-transform: uppercase;
     }
 }

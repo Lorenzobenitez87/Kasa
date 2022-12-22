@@ -1,9 +1,12 @@
 import LogoKasa from '../../../assets/LOGO.png'
 import '../../../styles/Header/Logo/index.css'
+import { Link } from 'react-router-dom'
 
 function Logo () {
     return (
-        <img src={LogoKasa} alt='Logo de Kasa' />
+        <Link to={'/'}>
+        <img src={LogoKasa} className='logo' alt='Logo de Kasa' />
+        </Link>
     )
 }
 
