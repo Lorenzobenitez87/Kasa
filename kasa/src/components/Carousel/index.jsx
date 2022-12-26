@@ -24,27 +24,41 @@ function Carousel({ pictures }) {
   }
 
   return (
+
     <div className="carousel">
+
       <div className="carouselPictures-box">
-        <img
-          className="carouselPicture"
-          src={pictures[current]}
-          alt="Magnifique location"
-        />
+        {pictures.length > 0 ? (
+          <img
+            className="carouselPicture"
+            src={pictures[current]}
+            alt="Magnifique location"
+          />
+        ) : (
+          <p className="carouselNo-pic-message">Aucune image disponible</p>
+        )}
       </div>
-      <nav className="carouselNav">
-        <i
-          className="fas fa-chevron-left"
-          onClick={prevSlide}
-        ></i>
-        <i
-          className="fas fa-chevron-right"
-          onClick={nextSlide}
-        ></i>
-      </nav>
-      <div className="carouselCounter">
-        {current + 1}/{pictures.length}
-      </div>
+      {pictures.length > 1 ? (
+        <nav className="carouselNav">
+          <i
+            className="fas fa-chevron-left"
+            onClick={prevSlide}
+          ></i>
+          <i
+            className="fas fa-chevron-right"
+            onClick={nextSlide}
+          ></i>
+        </nav>
+      ) : (
+        ""
+      )}
+      {pictures.length > 1 ? (
+        <div className="carouselCounter">
+          {current + 1}/{pictures.length}
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   )
 }
