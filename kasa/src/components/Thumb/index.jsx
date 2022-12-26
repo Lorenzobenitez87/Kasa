@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import PropTypes from "prop-types";
+import PropTypes from "prop-types"
 
 import '../../styles/Thumb/index.css'
 
+
 function Thumb({ id, cover, title, location }) {
+
   return (
 
     <Link
@@ -23,15 +25,16 @@ function Thumb({ id, cover, title, location }) {
         <h2 className='thumbTitle'>{title}</h2>
       </article>
     </Link>
-
   )
 }
+
 
 Thumb.propTypes = {
   id: PropTypes.string.isRequired,
   cover: PropTypes.string,
   title: PropTypes.string.isRequired,
   location: PropTypes.string,
-};
+}
+
 
 export default Thumb

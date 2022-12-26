@@ -1,5 +1,5 @@
 .gallery {
-    
+
     position: relative;
 
     width: 100%;
@@ -17,7 +17,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    
+
     gap: 50px;
 
     position: relative;

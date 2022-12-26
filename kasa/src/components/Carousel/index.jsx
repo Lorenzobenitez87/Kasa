@@ -4,19 +4,20 @@ import PropTypes from "prop-types"
 
 import "../../styles/Carousel/index.css"
 
+
 function Carousel({ pictures }) {
 
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(0)
 
-  const length = pictures.length;
+  const length = pictures.length
 
   const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
+    setCurrent(current === length - 1 ? 0 : current + 1)
+  }
 
   const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-  };
+    setCurrent(current === 0 ? length - 1 : current - 1)
+  }
 
   if (!Array.isArray(pictures) || pictures.length <= 0) {
     return null;
@@ -28,7 +29,7 @@ function Carousel({ pictures }) {
         <img
           className="carouselPicture"
           src={pictures[current]}
-          alt=""
+          alt="Magnifique location"
         />
       </div>
       <nav className="carouselNav">
@@ -51,6 +52,6 @@ function Carousel({ pictures }) {
 
 Carousel.propTypes = {
   pictures: PropTypes.arrayOf(PropTypes.string),
-};
+}
 
 export default Carousel

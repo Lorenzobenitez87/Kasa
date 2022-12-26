@@ -1,10 +1,8 @@
 import React from "react"
 import { useParams } from 'react-router-dom'
 import { housingsList } from '../datas/housingsList'
-
 import Header from '../components/Header/index'
 import Carousel from '../components/Carousel'
-//import Slideshow from "../components/Slideshow"
 import Collapse from '../components/Collapse'
 import Footer from '../components/Footer/index'
 import Error404 from "./Error404"
@@ -19,7 +17,7 @@ function Housing() {
   const { id } = new useParams()
 
   // Fonction qui nous renvoie l'objet dans un tableau grâce à une de ses propriétés
-  const housingToDisplay = housingsList.find(housing => housing.id === id) 
+  const housingToDisplay = housingsList.find(housing => housing.id === id)
 
   if (!housingToDisplay) {
     return <Error404 />
@@ -29,9 +27,12 @@ function Housing() {
   const ratingScale = [1, 2, 3, 4, 5]
 
   return (
+
     <div>
       <Header />
+
       <Carousel pictures={ad.pictures} />
+
       <main >
         <header className="housingHeader">
           <div className="housingSummary-box">
@@ -81,10 +82,10 @@ function Housing() {
           </div>
         </div>
       </main>
+
       <Footer />
     </div>
   )
-
 }
 
 export default Housing

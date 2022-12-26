@@ -1,50 +1,50 @@
 .containerSlide {
 
 
-    height: 415px;
-    width: 100%;
+  height: 415px;
+  width: 100%;
 
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 
-    border-radius: 25px;
-    margin: auto;
+  border-radius: 25px;
+  margin: auto;
 
-    background: #FF6060;
+  background: #FF6060;
 }
 
 .containerSlide img {
 
-    height: 415px;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    object-fit: cover;
+  height: 415px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  object-fit: cover;
 
-    border-radius: 25px;
+  border-radius: 25px;
 
-    color: white;
+  color: white;
 }
 
 .eachSlide {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .default-nav {
-    margin: 30px;
+  margin: 30px;
 }
 
 
 @media screen and (max-width: 970px) {
-    .containerSlide {
-      height: 330px;
-      border-radius: 1rem;
-    } 
+  .containerSlide {
+    height: 330px;
+    border-radius: 1rem;
   }
-  
-  @media screen and (max-width: 550px) {
-    .containerSlide {
-      height: 255px;
-      border-radius: 10px;
-    }
+}
+
+@media screen and (max-width: 550px) {
+  .containerSlide {
+    height: 255px;
+    border-radius: 10px;
   }
+}

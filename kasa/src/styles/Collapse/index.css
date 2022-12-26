@@ -63,9 +63,9 @@
   list-style: none;
 
   font-weight: 400;
-  
+
   padding: 0px 30px 10px 20px;
-  
+
   transition: 200ms;
 
   color: #FF6060;
@@ -101,8 +101,7 @@
 
 @media screen and (max-width: 550px) {
 
-.collapses-box {
-
-  margin-bottom: auto;
-}
+  .collapses-box {
+    margin-bottom: auto;
+  }
 }

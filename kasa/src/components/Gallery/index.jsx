@@ -1,5 +1,5 @@
-import React from "react";
-import Thumb from "../Thumb";
+import React from "react"
+import Thumb from "../Thumb"
 //import PropTypes from "prop-types";
 
 import '../../styles/Gallery/index.css'
@@ -8,8 +8,9 @@ import { housingsList } from "../../datas/housingsList.js"
 
 
 function Gallery() {
- 
+
   return (
+
     <main className="gallery">
       <ul>
         {housingsList.map(({ id, cover, title, location }) =>
@@ -21,12 +22,10 @@ function Gallery() {
               location={location}
             />
           </li>
-          
         )}
       </ul>
     </main>
   )
-
 }
 
 
