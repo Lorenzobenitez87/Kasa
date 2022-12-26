@@ -1,29 +1,34 @@
 .gallery {
 
     position: relative;
+    overflow: hidden;
 
     width: 100%;
 
-    padding: 50px;
     margin-bottom: 50px;
-
+    
     border-radius: 25px;
-
+    
     background: #F6F6F6;
 }
 
 .gallery ul {
 
+    max-height: 830px;
+    
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    
+    position: relative;
+    overflow: auto;
+    list-style: none;
 
     gap: 50px;
 
-    position: relative;
-    list-style: none;
-    padding: 0;
+    padding: 50px;
     margin: 0;
+    margin-right: -25px;
 }
 
 @media screen and (max-width: 970px) {
@@ -31,16 +36,20 @@
     .gallery {
 
         width: 100%;
-
-        padding: 0;
-        border-radius: 0;
-
+                
         background: white;
-    }
 
+        border-radius: 0;
+        overflow: none;
+    }
+    
     .gallery ul {
 
-        flex-direction: column;
+        display: block;
+        padding: 25px;
         gap: 30px;
     }
+}
+
+@media screen and (max-width: 550px) {
 }

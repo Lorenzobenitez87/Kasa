@@ -1,6 +1,6 @@
 import '../../styles/Banner/index.css'
 
-function SectionImage({ children }) {
+function Banner({ children }) {
 
     return (
 
@@ -10,4 +10,4 @@ function SectionImage({ children }) {
     )
 }
 
-export default SectionImage
+export default Banner

@@ -54,7 +54,7 @@ function Carousel({ pictures }) {
         ""
       )}
 
-      {pictures.length > 1 ? (
+      {pictures.length > 0 ? (
         <div className="carouselCounter">
           {current + 1}/{pictures.length}
         </div>
@@ -69,5 +69,6 @@ function Carousel({ pictures }) {
 Carousel.propTypes = {
   pictures: PropTypes.arrayOf(PropTypes.string),
 }
+
 
 export default Carousel
