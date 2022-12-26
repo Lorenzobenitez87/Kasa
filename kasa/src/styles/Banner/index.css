@@ -1,4 +1,4 @@
-.section {
+.banner {
 
     display: flex;
     justify-content: center;
@@ -15,7 +15,7 @@
     background-color: black;
 }
 
-.section img {
+.banner img {
 
     height: 100%;
     width: 100%;
@@ -26,7 +26,7 @@
     opacity: 0.7;
 }
 
-.section h1 {
+.banner h1 {
 
     font-size: 48px;
     font-weight: 500;
@@ -41,7 +41,7 @@
 
 @media screen and (max-width: 970px) {
 
-    .section {
+    .banner {
 
         height: 110px;
 
@@ -49,12 +49,12 @@
         margin-bottom: 20px;
     }
 
-    .section img {
+    .banner img {
 
         border-radius: 10px;
     }
 
-    .section h1 {
+    .banner h1 {
 
         font-size: 32px;
     }
@@ -62,12 +62,12 @@
 
 @media screen and (max-width: 550px) {
 
-    .section {
+    .banner {
 
         justify-content: flex-start;
     }
 
-    .section h1 {
+    .banner h1 {
 
         font-size: 24px;
 

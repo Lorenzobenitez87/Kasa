@@ -1,5 +1,5 @@
 import Header from '../components/Header/index'
-import SectionImg from '../components/SectionImage/index'
+import Banner from '../components/Banner/index'
 import Collapse from '../components/Collapse'
 import Footer from '../components/Footer/index'
 
@@ -35,9 +35,9 @@ function About() {
     <div>
       <Header />
 
-      <SectionImg >
+      <Banner >
         <img src={Image} alt="Les montagnes et l'air pure" />
-      </ SectionImg >
+      </ Banner >
 
       <div className="collapses-box">
         {ABOUT_CONTENTS.map(({ title, text }) => (

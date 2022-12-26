@@ -1,10 +1,10 @@
-import '../../styles/SectionImage/index.css'
+import '../../styles/Banner/index.css'
 
 function SectionImage({ children }) {
 
     return (
-        
-        <section className='section'>
+
+        <section className='banner'>
             {children}
         </section>
     )
