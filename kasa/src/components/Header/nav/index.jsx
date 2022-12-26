@@ -9,8 +9,11 @@ function Nav() {
 
         <nav className='nav'>
             <NavLink
+                activeclassname='active'
+                exact="true"
                 to="/">Accueil</NavLink>
             <NavLink
+                activeclassname='active'
                 to="/about">A Propos</NavLink>
         </nav>
     )

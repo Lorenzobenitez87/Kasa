@@ -103,6 +103,7 @@
   }
 
   .carouselCounter {
+    font-size: 14px;
     bottom: 0.5rem;
   }
 }

@@ -19,9 +19,9 @@ function Carousel({ pictures }) {
     setCurrent(current === 0 ? length - 1 : current - 1)
   }
 
-  if (!Array.isArray(pictures) || pictures.length <= 0) {
-    return null;
-  }
+  //if (!Array.isArray(pictures) || pictures.length <= 0) {
+  //  return null;
+  //}
 
   return (
 
@@ -38,6 +38,7 @@ function Carousel({ pictures }) {
           <p className="carouselNo-pic-message">Aucune image disponible</p>
         )}
       </div>
+
       {pictures.length > 1 ? (
         <nav className="carouselNav">
           <i
@@ -52,6 +53,7 @@ function Carousel({ pictures }) {
       ) : (
         ""
       )}
+
       {pictures.length > 1 ? (
         <div className="carouselCounter">
           {current + 1}/{pictures.length}

@@ -1,44 +1,38 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { useState } from "react"
 
 import "../../styles/Collapse/index.css"
 
-class Collapse extends React.Component {
-  constructor(props) {
-    super(props)
 
-    this.state = {
-      isOpen: false,
-    }
-    this.updateIsOpen = this.updateIsOpen.bind(this)
+function Collapse({ title, textArray }) {
+
+  const [isOpen, setIsOpen] = useState(false)
+
+  const updateIsOpen = () => {
+    setIsOpen(!isOpen)
   }
 
-  updateIsOpen() {
-    this.setState({ isOpen: !this.state.isOpen })
-  }
+  const collapseIcon = `fas fa-chevron-${isOpen ? "up" : "down"}`
 
-  render() {
+  return (
 
-    const collapseIcon = `fas fa-chevron-${this.state.isOpen ? "up" : "down"}`
+    <section className={`collapse${isOpen ? " is-open" : " is-close"}`}>
 
-    return (
+      <h2 className="collapseTitle" onClick={updateIsOpen}>
+        <span>{title}</span>
+        <span className={collapseIcon}></span>
+      </h2>
 
-      <section className={`collapse${this.state.isOpen ? " is-open" : " is-close"}`}>
-
-        <h2 className="collapseTitle" onClick={this.updateIsOpen}>
-          <span>{this.props.title}</span>
-          <span className={collapseIcon}></span>
-        </h2>
-
-        <ul className={`collapseText ${this.state.isOpen ? "is-open" : "is-close"}`}>
-          {this.props.textArray.map((item, index) => (
-            <li key={`item-${index}`}>{item}</li>
-          ))}
-        </ul>
-      </section>
-    )
-  }
+      <ul className={`collapseText ${isOpen ? "is-open" : "is-close"}`}>
+        {textArray.map((item, index) => (
+          <li key={`item-${index}`}>{item}</li>
+        ))}
+      </ul>
+    </section>
+  )
 }
+
 
 Collapse.propTypes = {
   title: PropTypes.string.isRequired,

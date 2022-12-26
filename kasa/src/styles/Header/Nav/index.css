@@ -18,6 +18,10 @@ nav a {
     text-decoration: none;
 }
 
+.active {
+    text-decoration: underline;
+  }
+
 @media screen and (max-width: 970px) {
 
     .nav {
