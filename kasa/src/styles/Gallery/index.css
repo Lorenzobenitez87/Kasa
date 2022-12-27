@@ -29,13 +29,12 @@
     padding: 50px;
     margin: 0;
     margin-right: -25px;
-    padding-right: 75px;
+    padding-right: 65px;
 }
 
 @media screen and (max-width: 1600px) {
     .gallery ul {
-        margin-right: -15px;
-        padding-right: 65px;
+        margin-right: -25px;
 
     }
 }
